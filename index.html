@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Qasir.id</title>
+		<link rel="stylesheet" type="text/css" href="asset/style.css">
+	</head>
+	<body data-spy="scroll" data-target="#nav-wrapper" data-offset="50" style="">
+    
+    <script>
+	  	window.fbAsyncInit = function() {
+	    FB.init({
+	      appId      : '835194196690773',
+	      cookie     : true,
+	      xfbml      : true,
+	      version    : 'v3.1'
+	    });
+	      
+	    FB.AppEvents.logPageView();   
+	      
+	  };
+
+	 (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "https://connect.facebook.net/en_US/sdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>	
+    <!-- =========================================
+                    Loader
+    ========================================== -->
+    <div id="loader">
+    	<div class="loader-image"></div>
+    </div>
+
+    <!-- ====================
+		Navbar
+	  	===================== -->
+<nav class="navbar navbar-default" id="navbarStick" role="banner" style="top: 0px;">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a id="navbrandred" class="navbar-brand" href=""><img src="" alt=""></a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul id="nav" class="nav navbar-nav navbar-right">
+				<!-- navbar-form -->
+				<li class="navbar-form">
+					<a id="nav-btn1" class="btn-menu" href="">
+					FITUR					</a>
+				</li>
+				<li class="navbar-form">
+					<a id="nav-btn2" class="btn-menu" href="">
+					BLOG					</a>
+				</li>
+				<li class="navbar-form">
+					<a id="nav-btn3" class="btn-menu" href="">
+					KERJASAMA					</a>
+				</li>
+				<li class="navbar-form">
+					<a id="nav-btn4" class="btn-menu" href="">
+					PERANGKAT					</a>
+				</li>
+				<li class="navbar-form">
+					<button class="btn btn-transparent btn-size-nav" data-toggle="modal" data-target="" onclick="ga('send', 'event', 'Sign In', 'clickmenu');">
+						LOGIN					</button>
+				</li>
+				<li class="navbar-form">
+					<a id="btn--rgstr-custom" class="btn btn-register btn-size-nav" href="">DAFTAR</a>
+				</li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>
+    <!-- ============================ 
+   	            Modal 
+   	============================= -->
+    <div class="modal fade-scale" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+       <div class="modal-dialog">
+          <div class="modal-content">
+            <form id="form-id" onsubmit="return goSubdomain()">
+                <div class="modal-header">
+                    <button type="button" class="close cross-modal" data-dismiss="modal" aria-hidden="true">
+                          ×
+                    </button>
+
+                    <h4 class="modal-title" id="myModalLabel">
+                       LOGIN
+                    </h4>
+                </div>
+
+                <div class="modal-body">
+                    <div class="input-group">
+                        <input type="text" name="Subdomain" class="form-control modal-input" placeholder="Subdomain" aria-describedby="basic-addon2" required="" id="subdomain" value="">
+                        <span class="input-group-addon modal-span">.qasir.id</span>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary modal-button" id="submit-form" onclick="ga('send', 'event', 'Sign In', 'submit');">
+                       LOGIN
+                    </button>
+                </div>
+            </form> 
+          </div><!-- /.modal-content -->
+       </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    
+        	    <!-- ==================== 
+		Header Form Register 
+		===================== -->
+<header class="header">
+	<div class="container header--spacing-range">
+		<!-- FREE APLICATION -->
+		<div class="col-xs-12 col-sm-6 col-md-7 header--info">
+			<div class="wow fadeIn animated" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;">
+				<h1 class="header--title-content">Aplikasi Kasir Canggih &amp; Gratis</h1>
+				<p class="header--fill-content">Gampang digunakan oleh semua pedagang. Yuk, daftar Qasir sekarang!</p>
+			</div>
+			<img class="img-responsive wow fadeIn animated" data-wow-duration="1.5s" src="https://www.qasir.id/images/revamp-new-img/group-18@3x.png" alt="" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;">
+		</div>
+		<!-- FORM REGISTER -->
+		<div class="col-xs-12 col-sm-6 col-md-5 header--form">
+			<form id="registerForm" class="wow fadeIn animated" data-wow-duration="1.5s" method="post" action="" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;">
+				<input type="hidden" name="_token" value="cK4KAsCcF1vDFoxLHSZxAsUhCMGUuD1EBUWPzteB">
+				<div>
+					<span><img src="" alt=""></span>
+					<input type="text" name="name" value="" required="" placeholder="Nama Pemilik">
+					
+				</div>
+				<div>
+					<span><img src="" alt=""></span>
+					<input class="number-phone" type="text" value="" name="phone_number" required="" placeholder="No. HP">
+					
+				</div>
+				<p class="validate--form" id="mobile"></p>
+				<div>
+					<span><img src="" alt=""></span>
+					<input autocomplete="off" type="email" value="" name="email" placeholder="Email(tidak wajib)">
+					                 
+				</div>
+				<p class="validate--form" id="email"></p>
+				<div>
+					<span><img src="" alt=""></span>
+					<input type="password" class="pin" name="pin" minlength="6" maxlength="6" required="" placeholder="PIN">
+					
+				</div>
+				<button id="submit" type="submit" class="btn btn-register-now" data-toggle="modal" data-target="">Daftar Qasir</button>
+			</form>
+			<div class="header--form-playstore"><a href="" target="_blank"><img class="img-responsive" src="" alt=""></a></div>
+		</div>
+	</div>
+</header> <!-- End Header Form Register-->
+
+	    
+	    <!-- ======================== 
+		Feature Section Page 1 
+		======================== -->
+<div class="feature-section-page-1 wow fadeIn animated" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;"> <!-- Start Feature Section Page 1-->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 all-title-qasir">Kenapa Harus Pakai Qasir</div>
+				<div class="feature-section-page-1--wrapp-use-qasir col-md-3 col-sm-6 col-xs-12">
+					<img class="img-responsive feature-section-page-1--img-use-qasir" src="" alt="">
+					<p class="feature-section-page-1--title-use-qasir-img">Pake Gratis</p>
+					<p class="feature-section-page-1--fill-use-qasir-img">Aplikasinya gratis dan selalu update untuk fitur terbaru tanpa biaya.</p>
+				</div>
+				<div class="feature-section-page-1--wrapp-use-qasir col-md-3 col-sm-6 col-xs-12 wow fadeIn animated" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;">
+					<img class="img-responsive feature-section-page-1--img-use-qasir" src="" alt="">
+					<p class="feature-section-page-1--title-use-qasir-img">Semua Jenis Usaha</p>
+					<p class="feature-section-page-1--fill-use-qasir-img">Sesuai untuk semua jenis usaha yang ingin lebih berkembang secara efektif dan efisien.</p>
+				</div>
+				<div class="feature-section-page-1--wrapp-use-qasir col-md-3 col-sm-6 col-xs-12 wow fadeIn animated" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;">
+					<img class="img-responsive feature-section-page-1--img-use-qasir" src="" alt="">
+					<p class="feature-section-page-1--title-use-qasir-img">Simple dan Mudah</p>
+					<p class="feature-section-page-1--fill-use-qasir-img">Fitur fitur yang sangat mudah dan optimal, mulai dari menginput produk/jasa sampai dapat laporan dagang.</p>
+				</div>
+				<div class="feature-section-page-1--wrapp-use-qasir col-md-3 col-sm-6 col-xs-12 wow fadeIn animated" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;">
+					<img class="img-responsive feature-section-page-1--img-use-qasir" src="" alt="">
+					<p class="feature-section-page-1--title-use-qasir-img">Memajukan Usaha</p>
+					<p class="feature-section-page-1--fill-use-qasir-img">Mendapatkan akses untuk ke distributor dan kesempatan mengajukan pinjaman modal kerja.</p>
+				</div>
+		</div>
+	</div>
+</div><!-- end Feature Section Page 1 -->
+	    <!-- ===================== 
+		Feture Section Page 2 
+		===================== -->
+<div class="feature-section-page-2 wow fadeIn animated" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;"> <!-- Start Feature Section Page 2 -->
+	<div class="container">
+		<div class="all-title-qasir">Fitur Qasir</div>
+		
+		<div class="hidden-xs hidden-sm">	
+			<div class="col-xs-12 col-md-4 feature-section-page-2--wrapp-left">
+				<!-- features left -->
+				<div class="feature-section-page-2--qasir-left">
+					<div class="col-md-12 feature-section-page-2--report-transaction">
+						<div class="col-md-9">
+							<p class="feature-section-page-2--titlefill">Laporan Penjualan</p>
+							<p class="feature-section-page-2--range-title">Dimanapun dan Kapanpun  dengan mudah dapat memantau penjualan dari setiap cabang dan setiap pegawai.</p>
+						</div>
+						<div class="col-md-3"><img class="feature-section-page-2--img-features-size" src="https://www.qasir.id/images/revamp-new-img/report-sales.png" alt=""></div>
+					</div>
+					<div class="col-md-12 features-qasir-left-website">
+						<div class="col-md-9">
+							<p class="feature-section-page-2--titlefill">Melalui Website</p>
+							<p class="feature-section-page-2--range-title">Tersedia juga di website untuk laporan yang terjadi untuk melihat lebih detail, cukup dengan login saja.</p>
+						</div>
+						<div class="col-md-3"><img class="feature-section-page-2--img-features-size" src="https://www.qasir.id/images/revamp-new-img/through-website.png" alt=""></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-4 feature-section-page-2--wrapp-middle">
+				<!-- features middle -->
+				<div class="feature-section-page-2--qasir-middle">
+					<div><img class="img-responsive" src="" alt=""></div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-4 feature-section-page-2--wrapp-right">
+				<!-- features right -->
+				<div class="features-qasir-right">
+					<div class="col-md-12 feature-section-page-2--right-set-stock">
+						<div class="col-md-3"><img class="feature-section-page-2--img-features-size" src="" alt="">
+						</div>
+						<div class="col-md-9">
+							<p class="feature-section-page-2--titlefill">Atur Stok, Pegawai dan Toko</p>
+							<p class="feature-section-page-2--range-title">Kelola stok yang akan ditransaksikan, pegawai dan toko yang memiliki cabang dengan mudah.</p>
+						</div>
+					</div>
+					<div class="col-md-12 features-qasir-right-transaction-optimal">
+						<div class="col-md-3"><img class="feature-section-page-2--img-features-size" src="" alt="">
+						</div>
+						<div class="col-md-9">
+							<p class="feature-section-page-2--titlefill">Transaksi Yang Optimal</p>
+							<p class="feature-section-page-2--range-title">Tidak perlu takut kalau toko lagi ramai, karena halaman transaksinya sangat mudah dan cepat untuk setiap transaksi yang dilakukan.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="visible-xs visible-sm">
+			<div class="col-xs-12 feature-section-page-2--visible-xs">
+				<div class="feature-section-page-2--qasir-middle">
+					<div><img class="img-responsive" src="" alt=""></div>
+				</div>
+			</div>
+			<div class="col-sm-6">	
+				<div class="col-xs-12 feature-section-page-2--visible-xs">
+					<img class="feature-section-page-2--img-features-size" src="" alt="">
+				</div>
+				<div class="col-xs-12 feature-section-page-2--visible-xs">
+				<p class="feature-section-page-2--titlefill">Laporan Penjualan</p>
+				<p class="feature-section-page-2--range-title">Dimanapun dan Kapanpun  dengan mudah dapat memantau penjualan dari setiap cabang dan setiap pegawai.</p>
+			</div>
+			</div>
+			<div class="col-sm-6">	
+				<div class="col-xs-12 feature-section-page-2--visible-xs">
+					<img class="feature-section-page-2--img-features-size" src="" alt="">
+				</div>
+				<div class="col-xs-12 feature-section-page-2--visible-xs">
+					<p class="feature-section-page-2--titlefill">Melalui Website</p>
+					<p class="feature-section-page-2--range-title">Tersedia juga di website untuk laporan yang terjadi untuk melihat lebih detail, cukup dengan login saja.</p>
+				</div>
+			</div>
+			<div class="col-sm-6">	
+				<div class="col-xs-12 feature-section-page-2--visible-xs">
+					<img class="feature-section-page-2--img-features-size" src="" alt="">
+				</div>
+				<div class="col-xs-12 feature-section-page-2--visible-xs">
+					<p class="feature-section-page-2--titlefill">Atur Stok, Pegawai dan Toko</p>
+					<p class="feature-section-page-2--range-title">Kelola stok yang akan ditransaksikan, pegawai dan toko yang memiliki cabang dengan mudah.</p>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="col-xs-12 feature-section-page-2--visible-xs">
+					<img class="feature-section-page-2--img-features-size" src="" alt="">
+				</div>
+				<div class="col-xs-12 feature-section-page-2--visible-xs">
+					<p class="feature-section-page-2--titlefill">Transaksi Yang Optimal</p>
+					<p class="feature-section-page-2--range-title">Tidak perlu takut kalau toko lagi ramai, karena halaman transaksinya sangat mudah dan cepat untuk setiap transaksi yang dilakukan.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> <!-- End Feature Section Page 2 -->
+	    <!-- ===================== 
+		Feature Section Page 3 
+		===================== -->
+<div class="feature-section-page-3"> <!-- Start Feature Section Page 3  -->
+	<div class="container">
+		<div class="col-md-7 hidden-xs">
+			<img class="img-responsive" src="" alt="">
+				<img class="feature-section-page-3--pointer feature-section-page-3__pointer1 wow slideInDown animated" data-wow-duration="1.5s" src="" alt="" style="visibility: visible; animation-duration: 1.5s; animation-name: slideInDown;">
+				<img class="feature-section-page-3--pointer feature-section-page-3__pointer2 wow slideInDown animated" data-wow-duration="1.7s" src="" alt="" style="visibility: visible; animation-duration: 1.7s; animation-name: slideInDown;">
+				<img class="feature-section-page-3--pointer feature-section-page-3__pointer3 wow slideInDown animated" data-wow-duration="1.9s" src="" alt="" style="visibility: visible; animation-duration: 1.9s; animation-name: slideInDown;">
+				<img class="feature-section-page-3--pointer feature-section-page-3__pointer4 wow slideInDown animated" data-wow-duration="2.1s" src="" alt="" style="visibility: visible; animation-duration: 2.1s; animation-name: slideInDown;">
+				<img class="feature-section-page-3--pointer feature-section-page-3__pointer5 wow slideInDown animated" data-wow-duration="2.3s" src="" alt="" style="visibility: visible; animation-duration: 2.3s; animation-name: slideInDown;">
+				<img class="feature-section-page-3--pointer feature-section-page-3__pointer6 wow slideInDown animated" data-wow-duration="2.5s" src="" alt="" style="visibility: visible; animation-duration: 2.5s; animation-name: slideInDown;">
+				<img class="feature-section-page-3--pointer feature-section-page-3__pointer7 wow slideInDown animated" data-wow-duration="2.7s" src="" alt="" style="visibility: visible; animation-duration: 2.7s; animation-name: slideInDown;">
+				<img class="feature-section-page-3--pointer feature-section-page-3__pointer8 wow slideInDown animated" data-wow-duration="2.9s" src="" alt="" style="visibility: visible; animation-duration: 2.9s; animation-name: slideInDown;">
+				<img class="feature-section-page-3--pointer feature-section-page-3__pointer9 wow slideInDown animated" data-wow-duration="3.1s" src="" alt="" style="visibility: visible; animation-duration: 3.1s; animation-name: slideInDown;">
+				<img class="feature-section-page-3--pointer feature-section-page-3__pointer10 wow slideInDown animated" data-wow-duration="3.3s" src="" alt="" style="visibility: visible; animation-duration: 3.3s; animation-name: slideInDown;">
+				<img class="feature-section-page-3--pointer feature-section-page-3__pointer11 wow slideInDown animated" data-wow-duration="3.5s" src="" alt="" style="visibility: visible; animation-duration: 3.5s; animation-name: slideInDown;">
+				<img class="feature-section-page-3--pointer feature-section-page-3__pointer12 wow slideInDown animated" data-wow-duration="3.7s" src="" alt="" style="visibility: visible; animation-duration: 3.7s; animation-name: slideInDown;">
+				<img class="feature-section-page-3--pointer feature-section-page-3__pointer13 wow slideInDown animated" data-wow-duration="3.9s" src="" alt="" style="visibility: visible; animation-duration: 3.9s; animation-name: slideInDown;">
+				<img class="feature-section-page-3--pointer feature-section-page-3__pointer14 wow slideInDown animated" data-wow-duration="4.1s" src="" alt="" style="visibility: visible; animation-duration: 4.1s; animation-name: slideInDown;">
+				<img class="feature-section-page-3--pointer feature-section-page-3__pointer15 wow slideInDown animated" data-wow-duration="4.4s" src="" alt="" style="visibility: visible; animation-duration: 4.4s; animation-name: slideInDown;">
+		</div>
+		<img class="img-responsive visible-xs feature-section-page-3--img-indo-responsive" src="" alt="">
+		<div class="col-md-5 wow fadeIn animated" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;">
+			<p class="feature-section-page-3--title"><span id="merchant">23638</span> UMKM Sudah Menggunakan Qasir</p>
+			<p class="feature-section-page-3--fill">Pengguna Qasir tersebar di seluruh Indonesia dan sudah merasakan manfaatnya menggunakan Qasir.</p>
+			<p class="feature-section-page-3--download">Download Sekarang Aplikasinya!</p>
+			<a title="Download Now" target="_blank" href=""><img class="img-responsive feature-section-page-3--img-playstore" src="" alt=""></a>
+		</div>
+	</div>
+</div> <!-- End Feature Section Page 3 -->
+	    <!-- ================ 
+		cooperation Qasir 
+		===================== -->
+<div class="qasir-cooperation"> <!-- Start Cooperation Qasir -->
+	<div class="container">
+		<div class="row wow fadeIn animated" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;">
+			<div class="col-md-3">
+				<img class="img-responsive qasir-cooperation--img" src="" alt="">
+			</div>
+			<!-- Fill Cooperation -->
+			<div class="col-md-9">
+				<p class="qasir-cooperation--title">Kerja Sama Dengan Qasir</p>
+				<p class="qasir-cooperation--fill">Qasir bukan hanya sebuah aplikasi tapi merupakan sebuah platform pemberdayaan UMKM yang mempunyai misi untuk memajukan UMKM di Indonesia. Untuk itu Qasir membutuhkan dukungan dari berbagai pihak yang berpotensi memberikan kontribusi terhadap kemajuan UMKM di Indonesia. Qasir membuka kerja sama dengan perusahaan maupun institusi yang mempunyai misi yang sama dengan Qasir.</p>
+				<div class="qasir-cooperation--position-btn-transparent"><a class="btn btn-transparent" href="https://www.qasir.id/partnership">Yuk, Berdayakan UMKM</a></div>
+			</div>
+		</div>
+	</div>
+</div> <!-- End Cooperation Qasir -->
+	    <!-- ================ 
+		Testimonial 
+		================= -->
+<div class="testimonial-section"> <!-- Start Testimonial -->
+	
+
+	<div id="owl-demo" class="owl-carousel owl-theme" style="padding-top: 3rem; display: block; opacity: 1;">
+			
+		    <div class="owl-wrapper-outer"><div class="owl-wrapper" style="display: block; width: 5464px; left: 0px; transition: all 0ms ease 0s; transform: translate3d(-2049px, 0px, 0px);"><div class="owl-item" style="width: 683px;"><div class="item  active ">
+		      	<img class="img-circle" style="width: 100px;" src="https://qasir-website.s3.ap-southeast-1.amazonaws.com/comment/1531442646.jpeg">
+				<p class="testimonial-section--owner">Agung - Es Kepal Milo Viral</p>
+				<p class="testimonial-section--fill">Aplikasinya mudah dan gratis, bisa digunakan oleh semua jenis wirausaha, sekarang kami upgrade class, dari street food kita bisa seperti jualan di mall</p>
+		    </div></div><div class="owl-item" style="width: 683px;"><div class="item ">
+		      	<img class="img-circle" style="width: 100px;" src="https://qasir-website.s3.ap-southeast-1.amazonaws.com/comment/1530839837.jpg">
+				<p class="testimonial-section--owner">Zaskia Adya Mecca - Meccanism</p>
+				<p class="testimonial-section--fill">Setelah menggunakan Qasir, pencatatan transaksi penjualan di toko jauh lebih mudah dan bisa di cek kapan aja dimana aja</p>
+		    </div></div><div class="owl-item" style="width: 683px;"><div class="item ">
+		      	<img class="img-circle" style="width: 100px;" src="https://qasir-website.s3.ap-southeast-1.amazonaws.com/comment/1530341568.jpg">
+				<p class="testimonial-section--owner">Dias Satria - UMKMjagoan.com</p>
+				<p class="testimonial-section--fill">Aplikasi Qasir merupakan bentuk inovasi pencatatan keuangan modern yang bermanfaat bagi manajemen UMKM. Semoga layanan ini mampu termanfaatkan secara optimal oleh UMKM untuk berkembang lebih profesional.
+</p>
+		    </div></div><div class="owl-item" style="width: 683px;"><div class="item ">
+		      	<img class="img-circle" style="width: 100px;" src="https://qasir-website.s3.ap-southeast-1.amazonaws.com/comment/1530341580.jpg">
+				<p class="testimonial-section--owner">Adiwarman Karim - Pakar Ekonomi Syariah, Karim Consulting</p>
+				<p class="testimonial-section--fill">Qasir dapat merubah peradaban orang Indonesia dalam berdagang
+</p>
+		    </div></div></div></div>
+			
+		    
+			
+		    
+			
+		    
+			<div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page active"><span class=""></span></div></div></div></div>
+</div> <!-- End Testimonial -->
+
+	    <!-- ================ 
+		Covered By 
+		================ -->
+<div class="covered-by"> <!-- Start Covered By -->
+	<!-- Desktop View -->
+	<div class="all-title-qasir">Diliput Oleh</div>
+	<div class="container covered-by--float hidden-xs hidden-sm">	
+		<ul>
+						<li title="baca dulu" class="col-xs-12 col-sm-6 col-md-3"><a target="_blank" href="https://bacadulu.news/mendukung-kewirausahaan-di-jakarta-qasir-bersinergi-dengan-semarak-membara-okoce/"><img class="img-responsive covered-by__img" src="https://qasir-website.s3.ap-southeast-1.amazonaws.com/written/1531478707.png" alt=""></a></li>
+						<li title="warta ekonomi" class="col-xs-12 col-sm-6 col-md-3"><a target="_blank" href="https://www.wartaekonomi.co.id/read172526/mudahkan-pembukuan-pedagang-sandiaga-apresiasi-startup-qasir.html"><img class="img-responsive covered-by__img" src="https://qasir-website.s3.ap-southeast-1.amazonaws.com/written/1531455389.png" alt=""></a></li>
+						<li title="Ayoo Berita" class="col-xs-12 col-sm-6 col-md-3"><a target="_blank" href="http://ayooberita.com/m/berita-gelar-pelatihan-umkm-qasir-bidik-wirausaha-baru"><img class="img-responsive covered-by__img" src="https://qasir-website.s3.ap-southeast-1.amazonaws.com/written/1531455160.png" alt=""></a></li>
+						<li title="Wartakota" class="col-xs-12 col-sm-6 col-md-3"><a target="_blank" href="http://wartakota.tribunnews.com/2017/05/25/dinas-kumkmp-dki-mulai-gulirkan-ok-oce?page=all"><img class="img-responsive covered-by__img" src="https://qasir-website.s3.ap-southeast-1.amazonaws.com/written/1531456597.png" alt=""></a></li>
+					</ul>
+	</div>
+
+	<div id="owl-demo" class="owl-carousel owl-theme visible-xs visible-sm" style="display: block; opacity: 1;">
+		 
+	  	<div class="owl-wrapper-outer"><div class="owl-wrapper" style="display: block; width: 5464px; left: 0px; transition: all 0ms ease 0s; transform: translate3d(-2049px, 0px, 0px);"><div class="owl-item" style="width: 683px;"><div class="item  active ">
+	  		<img class="img-responsive covered-by__img" src="https://qasir-website.s3.ap-southeast-1.amazonaws.com/written/1531478707.png" alt="">
+	  	</div></div><div class="owl-item" style="width: 683px;"><div class="item ">
+	  		<img class="img-responsive covered-by__img" src="https://qasir-website.s3.ap-southeast-1.amazonaws.com/written/1531455389.png" alt="">
+	  	</div></div><div class="owl-item" style="width: 683px;"><div class="item ">
+	  		<img class="img-responsive covered-by__img" src="https://qasir-website.s3.ap-southeast-1.amazonaws.com/written/1531455160.png" alt="">
+	  	</div></div><div class="owl-item" style="width: 683px;"><div class="item ">
+	  		<img class="img-responsive covered-by__img" src="https://qasir-website.s3.ap-southeast-1.amazonaws.com/written/1531456597.png" alt="">
+	  	</div></div></div></div>
+	 	 
+	  	
+	 	 
+	  	
+	 	 
+	  	
+	 		<div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page active"><span class=""></span></div></div></div></div>
+</div> <!-- End Covered By -->
+    
+
+    <!-- =========================================
+                    Footer Section
+    ========================================== -->
+    <!-- ====================
+		Footer
+	  	===================== -->
+<footer class="footer-section">
+	<div class="container">
+		<!-- footer section fill -->
+		<div class="row hidden-xs">
+			<div id="footer-nav-1" class="col-xs-12 col-md-2 col-sm-6 footer-section--fill">
+				<p>
+					<a href="https://www.qasir.id"><img src="https://www.qasir.id/images/revamp-new-img/logo-footer.svg" alt=""></a>
+				</p>
+				<p>Jl. Bunga Mawar No.40, Cipete Selatan, Cilandak, <br>Jakarta Selatan <br>12410 DKI Jakarta</p>
+				<p>+6221 717  96026</p>
+				<a href="">hello@qasir.id</a>
+			</div>
+			<div id="footer-nav-2" class="col-xs-12 col-md-2 col-sm-6 footer-section--fill">
+				<h3 class="footer-section--title">Home</h3>
+				<p><a href="" target="_blank">Download App</a></p>
+				<p><a href="">Kerja sama dengan Qasir</a></p>
+				<p><a href="">Privacy Policy</a></p>
+			</div>
+			<div id="footer-nav-3" class="col-xs-12 col-md-2 col-sm-6 footer-section--fill">
+				<h3 class="footer-section--title">Tentang Kami</h3>
+				<p><a href="">Tentang Qasir</a></p>
+				<p><a href="">Karir</a></p>
+				<p><a href="">Tim Qasir</a></p>
+			</div>
+			<div id="footer-nav-4" class="col-xs-12 col-md-2 col-sm-6 footer-section--fill">
+				<h3 class="footer-section--title">Blog</h3>
+								<p><a href="">Event</a></p>
+								<p><a href="">Inspirasi</a></p>
+								<p><a href="">Studi Kasus</a></p>
+								<p><a href="">Tips</a></p>
+							</div>
+			<div id="footer-nav-5" class="col-xs-12 col-md-2 col-sm-6 footer-section--fill">
+				<h3 class="footer-section--title">Support</h3>
+				
+				<p><a target="_blank" href="">Bantuan</a></p>
+				<p><a target="_blank" href="">Video Tutorial</a></p>
+			</div>
+		</div>
+		<!-- Responsive Footer --> 
+		<div class="row visible-xs">
+			<div class="col-md-12 footer-section--fill">
+				<a href=""><p><img src="" alt=""></p></a>
+			</div>
+			<div id="accordian">
+				<ul>
+					<li>
+						<h3>Kontak <span class="pull-right glyphicon glyphicon-triangle-bottom arrow--position"></span></h3>
+						<ul>
+							<li><p>Jl. Bunga Mawar No.40, Cipete Selatan, Cilandak, <br>Jakarta Selatan <br>12410 DKI Jakarta</p></li>
+							<li><p>+6221 717  96026</p></li>
+							<li><p><a id="contact-mail" href="">hello@qasir.id</a></p></li>
+						</ul>
+					</li>
+					<li>
+					   	<h3>Home <span class="pull-right glyphicon glyphicon-triangle-bottom arrow--position"></span></h3>
+						<ul>
+							<li><a href="">Download App</a></li>
+							<li><a href="">Kerja sama dengan Qasir</a></li>
+							<li><a href="">Privacy Policy</a></li>
+						</ul>
+					</li>
+					<li>
+					   	<h3>Tentang Kami <span class="pull-right glyphicon glyphicon-triangle-bottom arrow--position"></span></h3>
+						<ul>
+							<li><a href="">Tentang Qasir</a></li>
+							<li><a href="">Karir</a></li>
+							<li><a href="">Tim Qasir</a></li>
+						</ul>
+					</li>
+					<li>
+					  	<h3>Blog <span class="pull-right glyphicon glyphicon-triangle-bottom arrow--position"></span></h3>
+						<ul>
+														<li><a href="">Event</a></li>
+														<li><a href="">Inspirasi</a></li>
+														<li><a href="">Studi Kasus</a></li>
+														<li><a href="">Tips</a></li>
+													</ul>
+					</li>
+					<li>
+					   	<h3>Support <span class="pull-right glyphicon glyphicon-triangle-bottom arrow--position"></span></h3>
+						<ul>
+							<li><a target="_blank" href="https://bantuan.qasir.id/">Bantuan</a></li>
+							<li><a target="_blank" href="">Video Tutorial</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<!-- Social media icon -->
+		<div class="row footer-section--social-media">
+			<div class="col-md-12">
+				<ul>
+					<li><a href="" target="_blank"><img class="" src="" alt=""></a></li>
+					<li><a href="https://www.instagram.com/qasir.id" target="_blank"><img class="footer-section--logo-social-media" src="" alt=""></a></li>
+					<li><a href=""><img class="footer-section--logo-social-media" src="asir.id/images/revamp-new-img/youtube.png" alt=""></a></li>
+					<li><a href="https://id.linkedin.com/company/qasir" target="_blank"><img class="footer-section--logo-social-media" src="" alt=""></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+    <!-- =========================================
+                    java script
+    ========================================== -->
+    <script type="text/javascript" src="https://www.qasir.id/assets/revamp-new/js/vendor.min.js"></script>
+    <script src="https://www.qasir.id/backoffice/sweetalert/sweetalert2.min.js"></script>
+    <script type="text/javascript" src="https://www.qasir.id/backoffice/dist/js/site.js"></script>
+    <link rel="stylesheet" href="https://www.qasir.id/assets/revamp-new/css/site.min.css">
+
+    
+        <script>
+        function goSubdomain() {
+                var subdomain = $('#subdomain').val();
+                var domain = window.location.hostname + window.location.pathname;
+                domain = domain.replace('www.', '');
+                                    window.location.replace('https://' + subdomain + '.qasir.id');
+                                return false;                
+            }
+
+        $(document).ready(function(){
+            $("#accordian h3").click(function(){
+                //slide up all the link lists
+                $("#accordian ul ul").slideUp();
+                //slide down the link list below the h3 clicked - only if its closed
+                if(!$(this).next().is(":visible"))
+                {
+                    $(this).next().slideDown();
+                }
+            })
+        })
+
+        $('body').scrollspy({ target: '#feature-side' })
+        $('[data-spy="scroll"]').each(function () {
+          var $spy = $(this).scrollspy('refresh')
+        })
+
+
+    // Animate for total merchant
+    $.fn.jQuerySimpleCounter = function( options ) {
+        var settings = $.extend({
+            start:  0,
+            end:    100,
+            easing: 'swing',
+            duration: 400,
+            complete: ''
+        }, options );
+
+        var thisElement = $(this);
+
+        $({count: settings.start}).animate({count: settings.end}, {
+            duration: settings.duration,
+            easing: settings.easing,
+            step: function() {
+                var mathCount = Math.ceil(this.count);
+                thisElement.text(mathCount);
+            },
+            complete: settings.complete
+        });
+    };
+    if (document.getElementById('merchant')) {
+        $('#merchant').jQuerySimpleCounter({end: document.getElementById('merchant').innerHTML ,duration: 5000});
+    }
+    /* AUTHOR LINK */
+    $('.about-me-img').hover(function(){
+            $('.authorWindowWrapper').stop().fadeIn('fast').find('p').addClass('trans');
+        }, function(){
+            $('.authorWindowWrapper').stop().fadeOut('fast').find('p').removeClass('trans');
+    });
+    // End animate total merchant
+    </script>
+    
+    <script>
+        $(function() {
+            $('#nav a[href~="' + location.href + '"]').parents('li').addClass('active');
+        });
+    </script>
+    
+    <script>
+    $("#feature-side ul li a[href^='#']").on('click', function(e) {
+       // prevent default anchor click behavior
+       e.preventDefault();
+       // store hash
+       var hash = this.hash;
+       // animate
+       $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 750, function(){
+            // when done, add hash to url
+            // (default click behaviour)
+            window.location.hash = hash;
+        });
+    });
+    </script>
+    <script>
+        //for timeline horizontal
+        timeline(document.querySelectorAll('.timeline'), {
+            forceVerticalMode: 700,
+            mode: 'horizontal',
+            verticalStartPosition: 'left',
+            visibleItems: 4
+        });
+    </script>
+    <script>
+	$(document).ready(function() {
+		function replaceSpecialCharacter(element) {
+			return element.replace(/[&\/\\#,+()$~%.'":*? <>{}a-zA-Z=!@-]/g,'');
+		}
+		$('input[name=phone_number]').change(function() {
+			var filter = replaceSpecialCharacter($(this).val())
+			$(this).val(filter)
+			$.ajax({
+				url: "https://www.qasir.id/admin-backoffice/ajax/checkmobile" + '?mobile=' + $(this).val(),
+				dataType:"json",
+				type: "get",
+				success: function(data){
+					var mobile = $('input[name=phone_number]')
+					if (data['status_code'] == 200) {
+						mobile.attr('required',false);
+						$('#mobile').hide().removeClass('not_empty');
+					}else{
+						mobile.attr('required',true);
+						$('#mobile').text(data['message'].errors).show().addClass('not_empty');
+					}
+				}
+			});
+		});
+
+		$('input[name=email]').change(function() {
+			$.ajax({
+				url: "https://www.qasir.id/admin-backoffice/ajax/checkemail" + '?email=' + $(this).val(),
+				dataType:"json",
+				type: "get",
+				success: function(data){
+					var email = $('input[name=email]')
+					if (data['status_code'] == 200) {
+						$('#email').hide().removeClass('not_empty');
+					}else if(data['status_code'] == 88){
+						$('#email').hide().removeClass('not_empty');
+					}
+					else{
+						if (data['message'].errors == "Email wajib diisi.") {
+						$('#email').hide().removeClass('not_empty');
+						}else{
+						$('#email').text(data['message'].errors).show().addClass('not_empty');
+						}
+					}
+				}
+			});
+		});
+
+		$("#submit").click(function(){
+		 var validate = true;
+		   	$('input:required').each(function(){
+			   	if($(this).val().trim() === ''){
+			    	validate = false;
+			    }
+		   	});
+
+		   	if ($("#registerForm p").not(this).hasClass("not_empty")) {
+			    return false;
+			 }
+
+		   	if(validate) { 
+		   		return true;
+   			}
+
+		});
+	});
+
+
+</script>
+    <script>
+  window.intercomSettings = {
+    app_id: "dj0yptcm"
+  };
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/dj0yptcm';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://staticxx.facebook.com/connect/xd_arbiter/r/j-GHT1gpo6-.js?version=43#channel=f11b64708a79da4&amp;origin=https%3A%2F%2Fwww.qasir.id" style="border: none;"></iframe></div><div></div></div></div><iframe id="intercom-frame" style="display: none;"></iframe><div id="intercom-container" style="position: fixed; width: 0px; height: 0px; bottom: 0px; right: 0px; z-index: 2147483647;"><div data-reactroot="" class="intercom-app intercom-app-launcher-enabled" aria-live="polite"><div></div><iframe allowfullscreen="" class="intercom-launcher-frame intercom-launcher-frame-shadow" name="intercom-launcher-frame" title="Intercom Live Chat"></iframe><iframe allowfullscreen="" class="intercom-launcher-discovery-frame" name="intercom-launcher-discovery-frame" title="Intercom Live Chat"></iframe><div></div><!-- react-empty: 6 --><div></div><!-- react-empty: 7 --></div></div></body>
+	
+</html>
